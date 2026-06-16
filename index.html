@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAM 3500 Diesel Sound Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="simulator-card">
+        <header>
+            <h1>RAM 3500 Simulator</h1>
+            <p class="subtitle">Real Inline-6 Diesel Engine Sound</p>
+        </header>
+
+        <!-- Dashboard Gauges -->
+        <div class="dashboard">
+            <div class="gauge">
+                <div class="gauge-value" id="rpm-display">0</div>
+                <div class="gauge-label">RPM</div>
+            </div>
+            <div class="gauge">
+                <div class="gauge-value" id="boost-display">0.0</div>
+                <div class="gauge-label">BOOST (PSI)</div>
+            </div>
+            <div class="gauge">
+                <div class="gauge-value" id="throttle-display">0%</div>
+                <div class="gauge-label">THROTTLE</div>
+            </div>
+        </div>
+
+        <!-- Engine Ignition -->
+        <div class="ignition-container">
+            <button id="ignition-btn" class="ignition-btn stopped">START ENGINE</button>
+            <div id="loading-status" class="status-message">Click Start to load audio engine...</div>
+        </div>
+
+        <!-- Custom Gas Pedal Area -->
+        <div class="pedal-box">
+            <div class="pedal-track">
+                <div class="pedal-hinge"></div>
+                <div id="gas-pedal" class="pedal">
+                    <div class="pedal-ridge"></div>
+                    <div class="pedal-ridge"></div>
+                    <div class="pedal-ridge"></div>
+                    <div class="pedal-ridge"></div>
+                </div>
+            </div>
+            <p class="pedal-instruction">Drag Pedal Down (0% - 100%)</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
